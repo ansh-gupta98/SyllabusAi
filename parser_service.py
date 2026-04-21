@@ -14,7 +14,7 @@ import os
 import tempfile
 from typing import Tuple
 
-from app.utils.logger import setup_logger
+from logger import setup_logger
 
 logger = setup_logger(__name__)
 
