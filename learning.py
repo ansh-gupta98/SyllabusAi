@@ -8,9 +8,9 @@ POST /api/v1/learning/next-lecture
 
 from fastapi import APIRouter, HTTPException, status
 
-from app.models.schemas import APIResponse, LearningRequest, LectureContent
-from app.services.llm_service import llm_service
-from app.utils.logger import setup_logger
+from schemas import APIResponse, LearningRequest, LectureContent
+from llm_service import llm_service
+from logger import setup_logger
 
 logger = setup_logger(__name__)
 router = APIRouter()
