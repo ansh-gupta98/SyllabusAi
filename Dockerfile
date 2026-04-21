@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-# ── Working directory ─────────────────────────────────────────────────────────
-WORKDIR /app
+
 
 # ── Dependencies (cached layer) ───────────────────────────────────────────────
 COPY requirements.txt .
@@ -25,4 +24,4 @@ ENV PORT=8000
 EXPOSE $PORT
 
 # ── Start ─────────────────────────────────────────────────────────────────────
-CMD uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 2
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
