@@ -14,8 +14,8 @@ import uuid
 from datetime import date, timedelta
 from typing import List, Optional
 
-from app.models.schemas import DailySchedule, SyllabusJSON, Topic
-from app.utils.logger import setup_logger
+from schemas import DailySchedule, SyllabusJSON, Topic
+from logger import setup_logger
 
 logger = setup_logger(__name__)
 
