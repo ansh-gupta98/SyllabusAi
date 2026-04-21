@@ -9,16 +9,16 @@ from datetime import date
 
 from fastapi import APIRouter, HTTPException, status
 
-from app.models.schemas import (
+from schemas import (
     APIResponse,
     ImageSyllabusRequest,
     PDFSyllabusRequest,
     SyllabusJSON,
 )
-from app.services.llm_service import llm_service
-from app.services.parser_service import doc_parser
-from app.services.schedule_service import schedule_builder
-from app.utils.logger import setup_logger
+from llm_service import llm_service
+from parser_service import doc_parser
+from schedule_service import schedule_builder
+from logger import setup_logger
 
 logger = setup_logger(__name__)
 router = APIRouter()
