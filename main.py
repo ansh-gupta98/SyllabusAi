@@ -14,8 +14,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import JSONResponse
 
-from app.routers import syllabus, learning, doubt, health
-from app.utils.logger import setup_logger
+import syllabus, learning, doubt, health
+from logger import setup_logger
 
 # ── Logger ──────────────────────────────────────────────────────────────────
 logger = setup_logger(__name__)
