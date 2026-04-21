@@ -16,7 +16,7 @@ import re
 import httpx
 from typing import Optional
 
-from app.utils.logger import setup_logger
+from logger import setup_logger
 
 logger = setup_logger(__name__)
 
